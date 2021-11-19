@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
@@ -49,6 +49,7 @@ function Contact() {
           <td>
             {
               <img
+                alt="Contact Profile"
                 className="rounded-circle"
                 width="70px"
                 height="70px"
@@ -84,22 +85,22 @@ function Contact() {
 
   return (
     <div className="container" style={{ textAlign: "center" }}>
-      <div className="d-flex align-items-center justify-content-between">
+      <div
+        className="d-flex align-items-center justify-content-between rounded-top"
+        style={{ backgroundColor: "lightgrey" }}
+      >
         <div
           className="d-flex align-items-center justify-content-between"
           style={{ width: "350px" }}
         >
-          <p style={{ fontWeight: "bold", fontSize: "30px" }} className="m-0">
+          <p
+            style={{ fontWeight: "bold", fontSize: "30px" }}
+            className="m-0 mx-3"
+          >
             Contact List
           </p>
         </div>
-        <p
-          style={{
-            textAlign: "right",
-            paddingRight: "20px",
-            marginBottom: "30px",
-          }}
-        >
+        <p className="my-4 px-3 text-center">
           <Button
             aria-controls="offcanvasNavbar"
             variant="success"
@@ -111,7 +112,7 @@ function Contact() {
       </div>
       <Table hover style={{ backgroundColor: "cornsilk" }}>
         <thead>
-          <tr style={{ backgroundColor: "wheat" }}>
+          <tr style={{ backgroundColor: "wheat", fontWeight: "bold" }}>
             {tableFields.map((field) => (
               <td>{field}</td>
             ))}

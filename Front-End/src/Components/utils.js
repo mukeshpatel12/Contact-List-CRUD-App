@@ -27,7 +27,7 @@ export const formFields = [
   },
   {
     label: "Telephone",
-    type: "text",
+    type: "number",
     name: "telephone",
     placeholder: "Enter telephone",
     required: "required",

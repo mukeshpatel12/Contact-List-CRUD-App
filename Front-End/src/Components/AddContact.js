@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createContact } from "../Redux/thunks";
 import { resetContact, setAddModelStatus } from "../Redux/Actions/allAction";
-import upload from "../assests/images/upload2.png";
+import upload from "../assests/images/uploadImage.png";
 import { formFields } from "./utils";
 
 export default function AddContact() {
@@ -68,10 +68,11 @@ export default function AddContact() {
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>
                 <img
+                  alt="Contact Profile"
                   width="200px"
                   height="200px"
                   style={{
-                    borderRadius: "100%",
+                    borderRadius: "30%",
                     border: "solid 2px",
                     textAlign: "center",
                     verticalAlign: "center",

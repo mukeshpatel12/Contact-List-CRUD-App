@@ -48,10 +48,10 @@ export default function EditContact() {
     <div>
       {/* Form Model Code  */}
       <Modal show={show.status} onHide={handleClose}>
-        <Modal.Header style={{backgroundColor:"wheat"}} closeButton>
+        <Modal.Header style={{ backgroundColor: "wheat" }} closeButton>
           <Modal.Title>Edit Contact</Modal.Title>
         </Modal.Header>
-        <Modal.Body style={{backgroundColor:"cornsilk"}}>
+        <Modal.Body style={{ backgroundColor: "cornsilk" }}>
           <Form onSubmit={submitContactHandle}>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Update Profile Picture</Form.Label>
@@ -65,6 +65,7 @@ export default function EditContact() {
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>
                 <img
+                  alt="Contact Profile"
                   width="200px"
                   height="200px"
                   style={{
@@ -103,9 +104,10 @@ export default function EditContact() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Telephone</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 name="telephone"
                 placeholder="Enter telephone"
+                maxLength="10"
                 defaultValue={selectContact.telephone}
                 required
               />
